@@ -25,17 +25,29 @@ $(".refresh").click(function() {
   webview.reload();
 });
 
+// Save and Exeute Site Diplay
 $(".choose").click(function() {
-  chrome.storage.local.set({key: $(".site").val()});
-  $(".url").attr("src", $(".site").val() );
-  $(".gear").trigger("click");
+  // If no url set do nothing
+  if (!$(".site").val()) {
+    return false;
+  } else {
+    // If there is a url lets save it and show the site
+    chrome.storage.local.set({key: $(".site").val()});
+    $(".url").attr("src", $(".site").val());
+    $(".gear").trigger("click");
+  }
 });
 
+// Toggle the WebView's visibility by the gear icon
 $(".gear").click(function() {
   $(".webWrap").slideToggle(100);
 });
+
+// Autohide WebView
 $(".webWrap").hide();
 
+// Save url when user types
+// Trigger click on choose when user presses Enter/Return
 $(".site").keydown(function(e) {
   if (e.which == 13) {
     $(".choose").trigger("click");
