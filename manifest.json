@@ -17,5 +17,5 @@
    "offline_enabled": false,
    "permissions": [ "webview", "storage", "fileSystem", "unlimitedStorage", "http://*/", "https://*/" ],
    "short_name": "Frameless Window Wrapper for Chrome",
-   "version": "1.2.2"
+   "version": "1.2.3"
 }
