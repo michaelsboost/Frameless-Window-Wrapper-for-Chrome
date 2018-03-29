@@ -1,0 +1,168 @@
+
+.titlebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px 8px;
+  
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebebeb+0,d4d4d4+100 */
+  background: #ebebeb; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ebebeb 0%, #d4d4d4 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#d4d4d4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ebebeb 0%,#d4d4d4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ebebeb 0%,#d4d4d4 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ebebeb 0%,#d4d4d4 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ebebeb 0%,#d4d4d4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#d4d4d4',GradientType=0 ); /* IE6-9 */
+
+  border-top: 1px solid #f6f6f6;
+  border-bottom: #e1e1e1;
+  cursor: default;
+  font-size: 14px;
+  color: #4c5171;
+  color: rgba(0, 0, 0, 0.6);
+  z-index: 9;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}
+
+.titlebar a {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 2px;
+  border-radius: 1em;
+  margin-right: 6px;
+  text-shadow: 0 0 0 transparent;
+  -webkit-app-region: no-drag;
+  color: #6b6b6b;
+  transition: ;
+}
+
+.titlebar a:hover {
+  color: #4f4f4f;
+}
+
+.gear {
+  margin-left: 3px;
+}
+
+.txtcenter {
+  text-align: center;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+.menubtns {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 3px 3px;
+  text-align: right;
+}
+
+.wrapApp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.webWrap, .info {
+  position: absolute;
+  top: 27px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+}
+.url {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: visible;
+}
+
+.site, .choose {
+  border: 0;
+}
+.site {
+  padding: 5px;
+  width: 180px;
+  background: #fff;
+}
+.choose {
+  padding: 5px 12px;
+  background: #b2d1ff;
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 281px;
+  padding: 10px;
+  bottom: 0;
+  background: #56a8fe;
+  overflow: auto;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 281px;
+  padding: 1em;
+  bottom: 0;
+  color: #959595;
+  background: #eafff3;
+  overflow: auto;
+}
+
+.right u, .right strong {
+  color: #757575;
+}
+
+.hide {
+  display: none;
+}
+
+/* .container {
+  box-shadow: 0 0 26px rgba(0, 0, 0, 0.5);
+} */
+
+/* The whole thing */
+.custom-menu {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid #CCC;
+  white-space: nowrap;
+  font-family: sans-serif;
+  background: #FFF;
+  color: #333;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each of the items in the list */
+.custom-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.custom-menu li:hover {
+  background-color: #DEF;
+}

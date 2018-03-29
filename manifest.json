@@ -1,0 +1,21 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "background.js" ]
+      }
+   },
+   "description": "A frameless window wrapper for chrome.",
+   "icons": {
+      "128": "assets/128.png",
+      "16": "assets/16.png",
+      "32": "assets/32.png",
+      "64": "assets/64.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "38",
+   "name": "Frameless Window Wrapper for Chrome",
+   "offline_enabled": false,
+   "permissions": [ "webview", "storage", "fileSystem", "unlimitedStorage", "http://*/", "https://*/" ],
+   "short_name": "Frameless Window Wrapper for Chrome",
+   "version": "1.2.2"
+}

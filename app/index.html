@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frameless Wrapper Chome App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="stylesheet" href="libraries/normalize/normalize.css" />
+    <script src="libraries/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="libraries/font-awesome/font-awesome.css" />
+    <link rel="stylesheet" href="libraries/font-awesome/macset.css" />
+    <link rel="stylesheet" href="css/index.css" /></textarea>
+  </head>
+  <body>
+    <div class="wrapApp">
+      <div class="titlebar txtcenter">
+        <div class="menubtns">
+          <a class="fl gear">
+            <i class="fa fa-gear"></i>
+          </a>
+          <a class="fr maximize">
+            <i class="fa fa-square-o"></i>
+          </a>
+          <a class="fr minimize">
+            <i class="fa fa-minus-square-o"></i>
+          </a>
+        </div>
+        &nbsp;
+        <span class="hide" data-set="appname">Hello world</span>
+      </div>
+      
+      <div class="info">
+        <div class="left">
+          <input type="text" class="site">
+          <button class="choose">Choose</button>
+        </div>
+        <div class="right">
+          <u>Instructions</u>
+          
+          <p>
+            <strong>Add URL</strong><br>
+            Enter any URL you wish to use in a frameless window.
+          </p>
+          
+          <p>
+            <strong>Settings</strong><br>
+            Click on the gear icon in the corner to change URL.
+          </p>
+          
+          <p>
+            <strong>Pin to Taskbar</strong><br>
+            You can pin this app to your taskbar and minimize it so it's always available for your use.
+          </p>
+        </div>
+      </div>
+      <div class="webWrap">
+        <webview src="about:blank" class="url"></webview>
+      </div>
+    </div>
+
+    <ul class="custom-menu">
+      <li data-action="close">Close</li>
+    </ul>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
