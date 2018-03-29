@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Frameless Wrapper Chome App</title>
+    <title>Frameless Wrapper Chrome App</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
@@ -9,7 +9,7 @@
     <script src="libraries/jquery/jquery.js"></script>
     <link rel="stylesheet" href="libraries/font-awesome/font-awesome.css" />
     <link rel="stylesheet" href="libraries/font-awesome/macset.css" />
-    <link rel="stylesheet" href="css/index.css" /></textarea>
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <div class="wrapApp">
@@ -18,11 +18,20 @@
           <a class="fl gear">
             <i class="fa fa-gear"></i>
           </a>
+<!--
+          <a class="fr close" style="position: relative;">
+            <i class="fa fa-square-o"></i>
+            <i class="fa fa-times" style="position: absolute; top: 1px; right: 2px; transform: scale(.6);"></i>
+          </a>
+-->
           <a class="fr maximize">
             <i class="fa fa-square-o"></i>
           </a>
           <a class="fr minimize">
             <i class="fa fa-minus-square-o"></i>
+          </a>
+          <a class="fr refresh">
+            <i class="fa fa-refresh"></i>
           </a>
         </div>
         &nbsp;
@@ -44,7 +53,7 @@
           
           <p>
             <strong>Settings</strong><br>
-            Click on the gear icon in the corner to change URL.
+            Click on the gear icon in the corner to toggle WebView visibility.
           </p>
           
           <p>

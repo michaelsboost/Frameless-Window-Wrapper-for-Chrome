@@ -1,8 +1,9 @@
-$(".minimize").click(function() {
-  chrome.app.window.current().minimize();
-});
+// Global Variables
+var webview       = document.querySelector('webview'),
+    defaultSite   = "https://michaelsboost.github.io/",
+    preloaderAnim = "https://michaelsboost.github.io/kodeWeave/embed/#47618f9fd80204ab1e5deab8e3d900d9?result";
 
-// Maximize window function
+// Toolbar Functions
 var maxWindow = function() {
   $(document.body).toggleClass("fullscreen");
   if ( $(".fullscreen").is(":visible") ) {
@@ -11,48 +12,49 @@ var maxWindow = function() {
     chrome.app.window.current().restore();
   }
 };
-
 $(".maximize").click(function() {
   maxWindow();
+});
+$(".minimize").click(function() {
+  chrome.app.window.current().minimize();
 });
 $(".titlebar").dblclick(function() {
   maxWindow();
 });
-
-var ValSetTest = function() {
-  $(".site").val("http://myrrord.sf.net/");
-  $(".url").attr("src", "http://myrrord.sf.net/");
-  $(".webWrap").slideDown(100);
-};
-
-var TestMaximize = function() {
-  ValSetTest();
-  
-  $(".titlebar").trigger("dblclick");
-  $(".titlebar").trigger("dblclick");
-  $(".maximize").trigger("click");
-  $(".maximize").trigger("click");
-}
-
-setTimeout(function() { 
-  ValSetTest();
-}, 300);
-
-$(".choose").click(function() {
-  $(".url").attr("src", $(".site").val() );
-  $(".webWrap").slideToggle(100);
+$(".refresh").click(function() {
+  webview.reload();
 });
 
-$(".site").keydown(function(e) {
-  if (e.which == 13) {
-    $(".choose").click();
-  }
+$(".choose").click(function() {
+  chrome.storage.local.set({key: $(".site").val()});
+  $(".url").attr("src", $(".site").val() );
+  $(".gear").trigger("click");
 });
 
 $(".gear").click(function() {
   $(".webWrap").slideToggle(100);
 });
 $(".webWrap").hide();
+
+$(".site").keydown(function(e) {
+  if (e.which == 13) {
+    $(".choose").trigger("click");
+  } else {
+    chrome.storage.local.set({key: $(".site").val()});
+  }
+});
+
+// Autoload saved site
+chrome.storage.local.get(['key'], function(result) {
+  if (!result.key) {
+    chrome.storage.local.set({key: defaultSite});
+    $(".site").val(defaultSite);
+    $(".url").attr("src", defaultSite);
+  } else {
+    $(".site").val(result.key);
+    $(".url").attr("src", result.key);
+  }
+});
 
 // Trigger action when the contexmenu is about to be shown
 $(document).on("contextmenu", ".titlebar", function (event) {
@@ -81,7 +83,6 @@ $(document).bind("mousedown", function (e) {
   }
 });
 
-
 // If the menu element is clicked
 $(".custom-menu li").click(function(){
 
@@ -89,15 +90,9 @@ $(".custom-menu li").click(function(){
   switch($(this).attr("data-action")) {
 
       // A case for each action. Your actions here
-    case "close": window.close(); break;
+    case "close": chrome.app.window.current().close(); break;
   }
 
   // Hide it AFTER the action was triggered
   $(".custom-menu").hide(100);
 });
-
-// function runTest() {
-//   $(".site").val("http://whatsmybrowsersize.com/").change();
-//   $(".choose").click();
-// }
-// runTest();
