@@ -38,3 +38,5 @@ Of course this app is free and open source, so you can always fork the project a
 If it was at all helpful for you. You can show your appreciation by [Donating via SquareCash](https://cash.me/$michaelsboost) and/or [PayPal](https://www.paypal.me/mikethedj4)
 
 Lastly you can also refer to the Official Google Chrome [Documentation](https://developer.chrome.com/extensions/api_index) for [Windows](https://developer.chrome.com/extensions/windows) and [WebView](https://developer.chrome.com/apps/tags/webview) API's.
+
+[![ko-fi](https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0)](https://ko-fi.com/michaelsboost)
